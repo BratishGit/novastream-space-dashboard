@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaStream | Cosmic Voyager Dashboard</title>
+    <meta name="description" content="A premium glassmorphic space exploration dashboard for the next generation of voyagers.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars-overlay"></div>
+    <div class="nebula-bg"></div>
+
+    <header class="glass-header">
+        <div class="logo">
+            <i data-lucide="rocket"></i>
+            <span>NovaStream</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Missions</a></li>
+                <li><a href="#">Star Chart</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <div class="notifications">
+                <i data-lucide="bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User Avatar">
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Feature 1: Mission Status (Large Card) -->
+        <section class="grid-item mission-control glass">
+            <div class="card-header">
+                <h2><i data-lucide="activity"></i> Mission Status</h2>
+                <span class="status-pulse">Live</span>
+            </div>
+            <div class="mission-data">
+                <div class="stat">
+                    <span class="label">Vessel Velocity</span>
+                    <span class="value" id="velocity">28,440 km/h</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Distance from Earth</span>
+                    <span class="value" id="distance">408,000 km</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Oxygen Levels</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 92%;"></div>
+                    </div>
+                    <span class="value">92%</span>
+                </div>
+            </div>
+            <div class="hud-lines"></div>
+        </section>
+
+        <!-- Feature 2: Planetary Atlas (Medium Card) -->
+        <section class="grid-item planet-atlas glass">
+            <div class="card-header">
+                <h2><i data-lucide="globe"></i> Planetary Atlas</h2>
+                <button class="btn-icon"><i data-lucide="chevron-right"></i></button>
+            </div>
+            <div class="planet-display">
+                <img src="assets/planet.png" alt="Featured Planet" class="rotating-planet">
+                <div class="planet-info">
+                    <h3>Mars</h3>
+                    <p>The Red Planet</p>
+                    <div class="tags">
+                        <span>Habitable Zone</span>
+                        <span>Multi-Rover</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 3: Galactic News Feed (Long Card) -->
+        <section class="grid-item news-feed glass">
+            <div class="card-header">
+                <h2><i data-lucide="rss"></i> Cosmic Intel</h2>
+            </div>
+            <div class="news-list">
+                <article class="news-item">
+                    <span class="time">2m ago</span>
+                    <h4>Supernova detected in M82 galaxy</h4>
+                    <p>Astronomers confirm a Type Ia supernova event...</p>
+                </article>
+                <article class="news-item">
+                    <span class="time">15m ago</span>
+                    <h4>Artemis V landing site finalized</h4>
+                    <p>NASA selects the Shackleton crater for 2029 landing.</p>
+                </article>
+                <article class="news-item">
+                    <span class="time">1h ago</span>
+                    <h4>Solar flare warning: Class X-1</h4>
+                    <p>Communication satellites placed on high alert.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Feature 4: Celestial Calendar (Small Card) -->
+        <section class="grid-item calendar glass">
+            <div class="card-header">
+                <h2><i data-lucide="calendar"></i> Events</h2>
+            </div>
+            <div class="event-card">
+                <div class="date">
+                    <span class="day">22</span>
+                    <span class="month">APR</span>
+                </div>
+                <div class="details">
+                    <h4>Lyrids Meteor Shower</h4>
+                    <p>Peak visibility: 03:00 UTC</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 5: System Health (Complex Stats) -->
+        <section class="grid-item system-health glass">
+            <div class="card-header">
+                <h2><i data-lucide="shield-check"></i> System Integrity</h2>
+            </div>
+            <div class="health-metrics">
+                <div class="metric">
+                    <canvas id="healthChart" width="100" height="100"></canvas>
+                    <div class="metric-text">
+                        <span class="val">98.4%</span>
+                        <span class="lab">Shield Core</span>
+                    </div>
+                </div>
+                <div class="quick-stats">
+                    <div class="q-stat">
+                        <i data-lucide="cpu"></i>
+                        <span>CPU: 12%</span>
+                    </div>
+                    <div class="q-stat">
+                        <i data-lucide="hard-drive"></i>
+                        <span>Storage: 4TB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="coordinates">
+            <span>RA: 5h 35m 17s</span>
+            <span>Dec: -5° 23' 28"</span>
+        </div>
+        <div class="copyright">
+            &copy; 2026 NovaStream Systems. Verified by AI.
+        </div>
+        <div class="system-time">
+            <span id="current-time">00:00:00 UTC</span>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

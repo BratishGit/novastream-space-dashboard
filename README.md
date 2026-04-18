@@ -50,6 +50,4 @@ No installation or build steps are required. NovaStream is built with pure web s
 - [ ] **Mission Planner**: A drag-and-drop tool for configuring deep-space trajectories.
 - [ ] **Dark/Light Mode Toggle**: Celestial vs. Solar themes.
 
----
 
-*Designed and Developed by Antigravity AI.*
